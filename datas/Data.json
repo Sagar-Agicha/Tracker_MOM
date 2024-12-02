@@ -1,0 +1,62 @@
+[
+    {
+        "nickname": "Prashant",
+        "owner": "Prashant",
+        "eta": "7th DEC 2024",
+        "status": "status",
+        "gmail": "gmail",
+        "phone": "phone",
+        "senior": "senior",
+        "eta1": "7th DEC 2024",
+        "discussion": "Process of Onboarding of new clients to be finalised and exited onboaring need to be reviwed by Sameer",
+        "eta2": "7th DEC 2024"
+    },
+    {
+        "nickname": "anil",
+        "owner": "Anil",
+        "eta": "30th NOV 2024",
+        "status": "status",
+        "gmail": "gmail",
+        "phone": "phone",
+        "senior": "senior",
+        "eta1": "30th NOV 2024",
+        "discussion": "Roles and Responsibilities of Shift Lead and Shift Engineer to be finalized.",
+        "eta2": "30th NOV 2024"
+    },
+    {
+        "nickname": "Akshay",
+        "owner": "Akshay",
+        "eta": "eta",
+        "status": "status",
+        "gmail": "gmail",
+        "phone": "phone",
+        "senior": "senior"
+    },
+    {
+        "nickname": "Shift Leads",
+        "owner": "Shift Leads",
+        "eta": "eta",
+        "status": "status",
+        "gmail": "gmail",
+        "phone": "phone",
+        "senior": "senior"
+    },
+    {
+        "nickname": "First Shift Leads",
+        "owner": "First Shift Leads",
+        "eta": "eta",
+        "status": "status",
+        "gmail": "gmail",
+        "phone": "phone",
+        "senior": "senior"
+    },
+    {
+        "nickname": "Yunus",
+        "owner": "Yunus",
+        "eta": "eta",
+        "status": "status",
+        "gmail": "gmail",
+        "phone": "phone",
+        "senior": "senior"
+    }
+]

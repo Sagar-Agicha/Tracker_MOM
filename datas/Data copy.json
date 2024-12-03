@@ -1,56 +1,122 @@
 [
     {
         "nickname": "Prashant",
-        "owner": "Prashant",
-        "eta": "eta",
-        "status": "status",
-        "gmail": "gmail",
-        "phone": "phone",
-        "senior": "senior"
+        "content": [    
+            {
+                "owner": "Prashant",
+                "task_cnt": 1,
+                "eta": "7th DEC 2024",
+                "status": "status",
+                "gmail": "gmail",
+                "phone": "phone",
+                "senior": "senior",
+                "Task1":[
+                    {
+                        "discussion":"Process of Onboarding of new clients to be finalised and exited onboaring need to be reviwed by Sameer",
+                        "eta": "7th DEC 2024"
+                    }
+                ]
+            }
+        ]
     },
     {
         "nickname": "anil",
-        "owner": "Anil",
-        "eta": "eta",
-        "status": "status",
-        "gmail": "gmail",
-        "phone": "phone",
-        "senior": "senior"
+        "content": [
+            {
+                "owner": "Anil",
+                "eta": "30th NOV 2024",
+                "task_cnt": 1,
+                "status": "status",
+                "gmail": "gmail",
+                "phone": "phone",
+                "senior": "senior",
+                "Task1":[
+                    {
+                        "discussion":"Roles and Responsibilities of Shift Lead and Shift Engineer to be finalized.",
+                        "eta": "30th NOV 2024"
+                    }
+                ]
+            }
+        ]
     },
     {
         "nickname": "Akshay",
-        "owner": "Akshay",
-        "eta": "eta",
-        "status": "status",
-        "gmail": "gmail",
-        "phone": "phone",
-        "senior": "senior"
+        "content": [
+            {
+                "owner": "Akshay",
+                "eta": "eta",
+                "task_cnt": 1,
+                "status": "status",
+                "gmail": "gmail",
+                "phone": "phone",
+                "senior": "senior",
+                "Task1":[
+                    {
+                        "discussion":"Roles and Responsibilities of Shift Lead and Shift Engineer to be finalized.",
+                        "eta": "30th NOV 2024"
+                    }
+                ]
+            }
+        ]
     },
     {
         "nickname": "Shift Leads",
-        "owner": "Shift Leads",
-        "eta": "eta",
-        "status": "status",
-        "gmail": "gmail",
-        "phone": "phone",
-        "senior": "senior"
+        "content": [
+            {
+                "owner": "Shift Leads",
+                "eta": "eta",
+                "task_cnt": 1,
+                "status": "status",
+                "gmail": "gmail",
+                "phone": "phone",
+                "senior": "senior",
+                "Task1":[
+                    {
+                        "discussion":"Roles and Responsibilities of Shift Lead and Shift Engineer to be finalized.",
+                        "eta": "30th NOV 2024"
+                    }
+                ]
+            }
+        ]
     },
     {
         "nickname": "First Shift Leads",
-        "owner": "First Shift Leads",
-        "eta": "eta",
-        "status": "status",
-        "gmail": "gmail",
-        "phone": "phone",
-        "senior": "senior"
+        "content": [
+            {
+                "owner": "First Shift Leads",
+                "eta": "eta",
+                "task_cnt": 1,
+                "status": "status",
+                "gmail": "gmail",
+                "phone": "phone",
+                "senior": "senior",
+                "Task1":[
+                    {
+                        "discussion":"Roles and Responsibilities of Shift Lead and Shift Engineer to be finalized.",
+                        "eta": "30th NOV 2024"
+                    }
+                ]
+            }
+        ]
     },
     {
         "nickname": "Yunus",
-        "owner": "Yunus",
-        "eta": "eta",
-        "status": "status",
-        "gmail": "gmail",
-        "phone": "phone",
-        "senior": "senior"
-    }   
+        "content": [
+            {
+                "owner": "Yunus",
+                "eta": "eta",
+                "status": "status",
+                "gmail": "gmail",
+                "phone": "phone",
+                "senior": "senior",
+                "task_cnt": 1,
+                "Task1":[
+                    {
+                        "discussion":"Roles and Responsibilities of Shift Lead and Shift Engineer to be finalized.",
+                        "eta": "30th NOV 2024"
+                    }
+                ]
+            }
+        ]
+    }
 ]

@@ -15,7 +15,7 @@ class DocumentClassifier(QMainWindow):
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
 
-        # Create button
+        # Create buttonhttps://github.com/Sagar-Agicha/Tracker_MOM.git
         self.upload_button = QPushButton("Upload Document", self)
         self.upload_button.clicked.connect(self.upload_document)
         layout.addWidget(self.upload_button)
@@ -85,66 +85,25 @@ class DocumentClassifier(QMainWindow):
                             
                             # Print all owner-eta mappings if both columns found
                             if owner_col is not None and eta_col is not None:
-                                print("\nOwner --> ETA mappings:")
-                                owner_eta_dict = {}  # Create dictionary for JSON
+                                print("\nOwner --> ETA mappings --> Task:")
                                 for idx in range(len(df)):
                                     owner = df.loc[idx, owner_col]
                                     eta = df.loc[idx, eta_col]
-                                    print(f"{owner} --> {eta}")
-                                    # Add to dictionary if owner and eta are not empty/null
-                                    if pd.notna(owner) and pd.notna(eta):
-                                        owner_eta_dict[str(owner)] = str(eta)
-                                
-                                # Save to JSON file
-                                json_path = 'datas/Data.json'
-                                try:
-                                    # Load existing data if file exists
-                                    if os.path.exists(json_path):
-                                        with open(json_path, 'r') as f:
-                                            existing_data = json.load(f)
-                                        
-                                        # Find Discussion column
-                                        discussion_col = None
-                                        for col in df.columns:
-                                            col_lower = str(col).lower()
-                                            if 'discussion' in col_lower:
-                                                discussion_col = col
-                                        
-                                        # Update eta and discussion for matching owners
-                                        for item in existing_data:
-                                            if str(item['owner']) in owner_eta_dict:
-                                                # Handle multiple ETAs
-                                                eta_count = 1
-                                                base_eta_exists = 'eta' in item and item['eta'] != 'eta'
-                                                
-                                                # Find the next available ETA slot
-                                                while True:
-                                                    eta_field = f'eta{eta_count}' if eta_count > 0 else 'eta'
-                                                    if eta_field not in item or item[eta_field] == 'eta':
-                                                        break
-                                                    eta_count += 1
-                                                
-                                                # Add the new ETA
-                                                if base_eta_exists or eta_count > 0:
-                                                    item[f'eta{eta_count}'] = owner_eta_dict[str(item['owner'])]
-                                                else:
-                                                    item['eta'] = owner_eta_dict[str(item['owner'])]
-                                                
-                                                # Add Discussion if available
-                                                if discussion_col is not None:
-                                                    discussion_row = df[df[owner_col] == item['owner']]
-                                                    if not discussion_row.empty:
-                                                        discussion_value = discussion_row.iloc[0][discussion_col]
-                                                        if pd.notna(discussion_value):
-                                                            item['discussion'] = str(discussion_value)
-                                    
-                                    # Write updated data to JSON file
-                                    with open(json_path, 'w') as f:
-                                        json.dump(existing_data, f, indent=4)
-                                    print(f"\nETA mappings saved to {json_path}")
-                                except Exception as e:
-                                    print(f"Error saving JSON: {str(e)}")
-                            break
+                                    task = df.loc[idx, 'DISCUSSION']
+                                    print(f"{owner} --> {eta} --> {task}")
+                                    file_json = open('datas/Data.json', 'r')
+                                    data = json.load(file_json)
+                                    for i in range(len(data)):
+                                        if data[i]['nickname'] == owner:
+                                            task_num = data[i]['content'][0]['task_cnt'] - 1
+                                            file_json_write = open('datas/Data.json', 'w')
+                                            data[i]['content'].append({'Task' + str(task_num+1): [{'discussion': task, 'eta': eta}]})
+                                            data[i]['content'][0]['task_cnt'] += 1
+                                            json.dump(data, file_json_write, indent=4)
+                                            file_json_write.close()
+                                            file_json.close()
+                                            break
+                                break
                         
                     row_index += 1
 
